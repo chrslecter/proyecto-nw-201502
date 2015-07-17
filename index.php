@@ -37,6 +37,9 @@
         case "roles":
                 require_once("controllers/roles.control.php");
                 break;
+        case "rolesm":
+                require_once("controllers/rolesm.control.php");
+                break;
         //para agregar una nueva pagina
         // agregar otro case
         default:
