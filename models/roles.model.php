@@ -24,14 +24,14 @@ function insertarRoles($roles){
 
     function obtenerRol($roleID){
         $rol= array();
-        $sqlstr = "SELECT * FROM `roles` WHERE `rolcod`='%s';";
+        $sqlstr = "SELECT * FROM `roles` WHERE `rolcod`=%s;";
         $sqlstr = sprintf($sqlstr, valstr($roleID));
         $rol = obtenerUnRegistro($sqlstr);
         return $rol;
       }
 
       function actualizarRoles($rol){
-      $updateSQL = "UPDATE `roles` SET `roldsc`='%s' WHERE `rolcod`='%s';";
+      $updateSQL = "UPDATE `roles` SET `roldsc`='%s', `rolest`='%s' WHERE `rolcod`=%s;";
       $updateSQL = sprintf($updateSQL,
                            valstr($rol["roldsc"]),
                            valstr($rol["rolest"]),
@@ -41,7 +41,7 @@ function insertarRoles($roles){
 
     function borrarRol($rolID){
       if($rolID){
-        $sqlDelete = "DELETE FROM `roles` WHERE `rolcod`='%s';";
+        $sqlDelete = "DELETE FROM `roles` WHERE `rolcod`=%s;";
         $sqlDelete = sprintf($sqlDelete,
                       valstr($rolID)
                     );

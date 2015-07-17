@@ -52,7 +52,7 @@
             //implementar logica de guardado
             if(actualizarRoles($_POST)){
               //forzando a que se actualice con los datos de la db
-              redirectWithMessage("¡Categoría Actualizada!","index.php?page=rolesm&mode=upd&rolcod=".$_POST["rolcod"]);
+              redirectWithMessage("¡Categoría Actualizada!","index.php?page=rolesm&mode=upd&rolcod=".$_POST["rolid"]);
             }
           }
           if(isset($_GET["rolcod"])){
@@ -83,7 +83,7 @@
           case "dlt":
           if(isset($_POST["btnacc"])){
             //implementar logica de guardado
-          if(borrarRol($_POST["rolcod"])){
+          if(borrarRol($_POST["rolid"])){
           //forzando a que se actualice con los datos de la db
           redirectWithMessage("¡Categoría Borrada!","index.php?page=roles");
           }
