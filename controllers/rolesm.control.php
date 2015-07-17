@@ -50,16 +50,16 @@
           case "upd":
           if(isset($_POST["btnacc"])){
             //implementar logica de guardado
-            if(actualizarCategoria($_POST)){
+            if(actualizarRoles($_POST)){
               //forzando a que se actualice con los datos de la db
-              redirectWithMessage("¡Categoría Actualizada!","index.php?page=category&acc=upd&ctgid=".$_POST["ctgid"]);
+              redirectWithMessage("¡Categoría Actualizada!","index.php?page=rolesm&mode=upd&rolcod=".$_POST["rolcod"]);
             }
           }
           if(isset($_GET["rolcod"])){
             $roles = obtenerRol($_GET["rolcod"]);
             if($roles){
-              $htmlDatos["categoryTitle"] = "Actualizar ".$roles["roldsc"];
-              $htmlDatos["categoryMode"] = "upd";
+              $htmlDatos["rolTitle"] = "Actualizar ".$roles["roldsc"];
+              $htmlDatos["rolMode"] = "upd";
               $htmlDatos["rolid"] = $roles["rolcod"];
               $htmlDatos["roldsc"]=$roles["roldsc"];
               $htmlDatos["rolest"]=$roles["rolest"];
@@ -70,7 +70,7 @@
               redirectWithMessage("¡Roles No Encontrada!","index.php?page=roles");
             }
           }else{
-            redirectWithMessage("¡Roles No Encontrada!","index.php?page=roles");
+            redirectWithMessage("¡Roles No se Encontrada!","index.php?page=roles");
           }
           break;
 
@@ -78,7 +78,35 @@
           defualt:
           redirectWithMessage("¡Acción no permitida!","index.php?page=roles");
           break;
-    }
+
+
+          case "dlt":
+          if(isset($_POST["btnacc"])){
+            //implementar logica de guardado
+          if(borrarRol($_POST["rolcod"])){
+          //forzando a que se actualice con los datos de la db
+          redirectWithMessage("¡Categoría Borrada!","index.php?page=roles");
+          }
+          }
+          if(isset($_GET["rolcod"])){
+            $roles = obtenerRol($_GET["rolcod"]);
+            if($roles){
+              $htmlDatos["rolMode"] = "dlt";
+              $htmlDatos["rolid"] = $roles["rolcod"];
+              $htmlDatos["roldsc"]=$roles["roldes"];
+              $htmlDatos["rolest"]=$roles["rolest"];
+              $htmlDatos["actSelected"]=($roles["rolest"] =="ACT")?"selected":"";
+              $htmlDatos["inaSelected"]=($roles["rolest"] =="INA")?"selected":"";
+              $htmlDatos["disabled"]='disabled="disabled"';
+              renderizar("rolesm", $htmlDatos);
+            }else{
+              redirectWithMessage("roles No Encontrada!","index.php?page=roles");
+            }
+          }else{
+            redirectWithMessage("roles No Encontrada!","index.php?page=roles");
+          }
+          break;
+        }
 
 
   }

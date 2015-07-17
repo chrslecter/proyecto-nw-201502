@@ -24,9 +24,30 @@ function insertarRoles($roles){
 
     function obtenerRol($roleID){
         $rol= array();
-        $sqlstr = "Select * from roles where rolcod='%s';";
+        $sqlstr = "SELECT * FROM `roles` WHERE `rolcod`='%s';";
         $sqlstr = sprintf($sqlstr, valstr($roleID));
-        $rol = obtenerUnRegistros($sqlstr);
+        $rol = obtenerUnRegistro($sqlstr);
         return $rol;
       }
+
+      function actualizarRoles($rol){
+      $updateSQL = "UPDATE `roles` SET `roldsc`='%s' WHERE `rolcod`='%s';";
+      $updateSQL = sprintf($updateSQL,
+                           valstr($rol["roldsc"]),
+                           valstr($rol["rolest"]),
+                           valstr($rol["rolid"]));
+      return ejecutarNonQuery($updateSQL) && true;
+    }
+
+    function borrarRol($rolID){
+      if($rolID){
+        $sqlDelete = "DELETE FROM `roles` WHERE `rolcod`='%s';";
+        $sqlDelete = sprintf($sqlDelete,
+                      valstr($rolID)
+                    );
+        return ejecutarNonQuery($sqlDelete);
+      }
+      return false;
+    }
+
 ?>

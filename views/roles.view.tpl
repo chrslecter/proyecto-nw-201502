@@ -28,7 +28,7 @@
         </td>
         <td>
             <a href="index.php?page=rolesm&mode=upd&rolcod={{rolcod}}">Actualizar</a> |
-            <a href>Eliminar</a>
+            <a href="index.php?page=rolesm&mode=dlt&rolcod={{rolcod}}">Eliminar</a>
         </td>
     </tr>
     {{endfor roles}}
