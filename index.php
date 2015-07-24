@@ -40,6 +40,25 @@
         case "rolesm":
                 require_once("controllers/rolesm.control.php");
                 break;
+
+
+        case "docente":
+                require_once("controllers/docente.control.php");
+                break;
+
+                case "docentem":
+                        require_once("controllers/docentem.control.php");
+                        break;
+
+
+        case "aportaciones":
+            require_once("controllers/aportaciones.control.php");
+                  break;
+
+                case "aportacionesm":
+                    require_once("controllers/aportacionesm.control.php");
+                          break;
+
         //para agregar una nueva pagina
         // agregar otro case
         default:

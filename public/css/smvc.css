@@ -8,22 +8,42 @@ body{
 }
 
 .menu{
-  list-style:none;
-  padding:0em;
-  margin:0em;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0,128,128,0.80);
+    text-align:right;
+    z-index: 999;
 }
-
+.menu li{
+    padding:1em;
+    margin:0;
+    display: inline;
+    list-style: none;
+}
 .menu li a{
-  margin:0em;
-  display:block;
-  padding:0.5em;
-  text-align:center;
-  text-decoration:none;
-  color:#888;
+    font-size: large;
+    margin:0 1.5em 0 0;
+    padding:0.30em;
+    color:#fff;
+    display: inline-block;
+    text-decoration: none;
 }
-
 .menu li a:hover{
-  color:#222;
+    background-color:#80cbc4;
+}
+.menu h1{
+    position: absolute;
+    left: 15pt;
+    bottom: -8pt;
+   display: inline;
+   float: left;
+   text-align: left;
+   color: #E0F2F1;
+
 }
 
 .postimage{

@@ -1,0 +1,334 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
+
+body{
+    background-color: #EEEEEE;
+   font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    overflow-x: hidden;
+    width: 100%;
+}
+ /* BARRA DE MENU */
+.menu{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0,128,128,0.80);
+    text-align:right;
+    z-index: 999;
+}
+.menu li{
+    padding:1em;
+    margin:0;
+    display: inline;
+    list-style: none;
+}
+.menu li a{
+    font-size: large;
+    margin:0 1.5em 0 0;
+    padding:0.30em;
+    color:#fff;
+    display: inline-block;
+    text-decoration: none;
+}
+.menu li a:hover{
+    background-color:#80cbc4;
+}
+.menu h1{
+    position: absolute;
+    left: 15pt;
+    bottom: -8pt;
+   display: inline;
+   float: left;
+   text-align: left;
+   color: #E0F2F1;
+
+}
+/* SLIDER */
+#slider{
+margin:80px auto;
+box-shadow: 0 .1em 1em black;
+-webkit-box-shadow: 0 .1em 1em black;
+-moz-box-shadow: 0 .1em 1em black;
+-o-box-shadow: 0 .1em 1em black;
+
+}
+ /* ESTILOS DEL SLIDESHOW */
+ ul.bjqs{position:relative; list-style:none;padding:0;margin:0;overflow:hidden; display:none;font-family: "Roboto", sans-serif;}
+li.bjqs-slide{position:absolute; display:none;}
+ul.bjqs-controls{list-style:none;margin:0;padding:0;z-index:9999;}
+ul.bjqs-controls.v-centered li a{position:absolute;}
+ul.bjqs-controls.v-centered li.bjqs-next a{right:0;}
+ul.bjqs-controls.v-centered li.bjqs-prev a{left:0;}
+ol.bjqs-markers{list-style: none; padding: 0; margin: 0; width:100%;}
+ol.bjqs-markers.h-centered{text-align: center;}
+ol.bjqs-markers li{display:inline;}
+ol.bjqs-markers li a{display:inline-block;}
+p.bjqs-caption{display:block;width:96%;margin:0;padding:2%;position:absolute;bottom:0;}
+.bjqs-caption{
+color:black;
+background:whitesmoke;
+opacity:.75;
+}
+
+/* BOTONERA UBICADA AL PIE DEL SLIDESHOW */
+ol.bjqs-markers{
+margin-top:35px;
+}
+ol.bjqs-markers li a{
+padding: 5px 10px;
+background: #000;
+color: #fff;
+margin: 5px;
+text-decoration: none;
+transition:background .5s ease;
+-webkit-transition:background .5s ease;
+-moz-transition:background .5s ease;
+-o-transition:background .5s ease;
+}
+li.active-marker a, ol.bjqs-markers li a:hover{
+background:gray!important;
+}
+
+/* CONTROLES ATRAS Y ADELANTE */
+ul.bjqs-controls.v-centered li a {
+display: block;
+padding: 10px;
+background: whitesmoke;
+color: #000;
+text-decoration: none;
+opacity:.45;
+
+transition:color .5s ease, background .5s ease;
+-webkit-transition:color .5s ease, background .5s ease;
+-moz-transition:color .5s ease, background .5s ease;
+-o-transition:color .5s ease, background .5s ease;
+}
+ul.bjqs-controls.v-centered li a:hover{
+    background:#000;
+    color:#fff;
+}
+
+/* ESTILOS PRIMER DIV */
+.baner1 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 30px;
+    width: 100%;
+    max-height: 50%;
+    background-color: black;
+}
+.baner1 img{
+    position: relative;
+
+}
+.baner1 p{
+    margin-right: 10%;
+    position: absolute;
+    top: 70pt;
+    display: inline-block;
+    color:#BDBDBD;
+    text-align: center;
+    font-size: 14pt;
+}
+ /* ESTILOS SEGUNDO DIV */
+.baner2{
+    margin: 0;
+    padding: 0;
+    position: relative;
+     width: 100%;
+    max-height: 50%;
+    background-color:white;
+}
+.baner2 img{
+  position: relative;
+
+}
+.baner2 p{
+    margin-right: 5%;
+    position: absolute;
+    top: 90pt;
+    display: inline-block;
+    color:#757575;
+    text-align: center;
+    font-size: 14pt;
+
+}
+ /* ESTILOS DIV 3*/
+.baner3{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    max-height: 50%;
+    background-color:#B2DFDB;
+}
+.baner3 img{
+    position: relative;
+    left: 67%;
+    }
+
+.baner3 p{
+    margin-left: 10%;
+    margin-right: 40%;
+    position: absolute;
+    top: 90pt;
+    display: inline-block;
+    color:#757575;
+    text-align: center;
+    font-size: 14pt;
+}
+  .galery{
+                position:relative;
+                margin:70px 0 0 224px ;
+                padding:0;
+                overflow: hidden;
+                background-image:url("ludus.jpg");
+                width: 900px ;
+                height: 563px;
+                text-align: center;
+         }
+           #mostrar
+            {
+               width: 900px;
+                height: 563px;
+            }
+            .galery2{
+                margin-bottom:1px;
+                padding: 0;
+                 position:relative;
+               left: 20%;
+            }
+   .galery2 ul{
+
+            }
+    .galery2 li{
+    display: inline-block;
+    }
+    .galery2 li img{
+            width: 100px;
+            }
+    .content1{
+    text-align: center;
+    font-size:15px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #4db6ac;
+           }
+
+.postit {
+    margin-top: 2em;
+    background-color:white;
+    padding: 4em 2em;
+    margin:16px;
+    width:280px;
+    display:inline-block;
+    box-shadow: 0 0 0 0.070em #c0c0c0;
+    border-radius: 49%;
+}
+.postix {
+    background-color:#d1edea;
+    padding: 4em 2em;
+    margin:16px;
+    margin-left: 4em;
+    width:500px;
+    display:inline-block;
+    box-shadow: 0 0 0 0.070em #c0c0c0;
+    border-radius: 10%;
+}
+.postix h1,p {
+    text-align: center;
+}
+.postix img {
+    float: left;
+    display: inline;
+    width: 90px ;
+    height: 90px ;
+}.posti {
+    background-color:#d1edea;
+    padding: 4em 2em;
+    margin:16px;
+    margin-top: 5em;
+    margin-left: 4em;
+    width:500px;
+    display:inline-block;
+    box-shadow: 0 0 0 0.070em #c0c0c0;
+    border-radius: 10%;
+}
+.posti h1,p {
+    text-align: center;
+}
+.posti img {
+    float: left;
+    display: inline;
+    width: 90px ;
+    height: 90px ;
+}
+.FAQcuerpo{
+background-image: url("ludus.jpg");
+background-position: center;
+background-size: cover;
+}
+.FormularioDiv img {
+    margin-top: 2em;
+    margin-left: 20%;
+}
+.FormularioDiv {
+    margin-top: 5em;
+    margin-bottom: 1em;
+    background-color: #b4b4b4;
+    margin-left: 18%;
+    margin-right: 18%;
+    border-radius: 10%;
+    background-image: url("ludus.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-shadow: 1.5px 1.5px black;
+    font-size: 18px;
+}
+
+.FormularioDiv form{
+    margin-bottom: 1em;
+    margin-left: 17%;
+    margin-right: 20%;
+}
+.FormularioDiv h1{
+    text-align:center;
+}
+.FormularioDiv form p{
+    text-align:left;
+    margin-bottom: 0;
+    text-shadow: 1.5px 1.5px black;
+}
+.FormularioDiv form img{
+    margin-left: 43%;
+}
+.FormularioDiv form input{
+    width: 42em;
+}
+.espacio img{
+    margin-top: 1em;
+    width: 100%;
+    }
+    .espacioA img{
+    margin-top: 3.9em;
+    width: 100%;
+    }
+/* ESTILOS PIE DE PAGINA */
+footer{
+    margin: 0;
+      border-top:solid 0.125em #ddd;
+	padding:29px;
+	font-family: "Roboto", monospace;
+	text-align: center ;
+	font-size: 0.9em;
+        color:white ;
+        background-color: rgba(0,128,128,0.95);
+            width: 100%;
+    }

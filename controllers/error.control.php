@@ -1,6 +1,6 @@
 <?php
 /* Error Controller
- * 2014-10-14 
+ * 2014-10-14
  * Created By OJBA
  * Last Modification 2014-10-14 20:04
  */
@@ -17,7 +17,7 @@
                             )
                );
   }
- 
+
 
   run();
 ?>

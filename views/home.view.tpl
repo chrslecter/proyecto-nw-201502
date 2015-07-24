@@ -1,4 +1,8 @@
-<h2>Desarrollo de Negocios Web</h2>
+<br>
+<br>
+<br>
+<br>
+
 <p>
   Este es un simple ejemplo de como podemos utilizar php y los conceptos de un patrón MVC para estructurar un proyecto de negocio web usando un esquema funcional. El patrón "Modelo, Vista Controlador" es utilizando en muchos lenguages de programación por su forma lógica y versatil de organizar el código. Dentro de los beneficios que ofrece el implementarlo se encuentra:
   <ol>
@@ -31,4 +35,3 @@
     </li>
   </ol>
 </p>
-<img class="postimage" src="public/img/mvcDiagram.svg" />
