@@ -30,17 +30,16 @@
           $htmlData["errores"][]=array("errmsg"=>"Correo Electrónico ya Usado!");
         }else{
           // geenrar la contraseña salada (salting)
-          $fchingreso = time(); //date("YmdHisu"); //20141104203730069785
-
-          $pswdSalted = "";
+          $fchingreso = date("Y-m-d",$t); //date("YmdHisu"); //20141104203730069785
           if($fchingreso % 2 == 0){
             $pswdSalted = $pswd . $fchingreso;
           }else{
             $pswdSalted = $fchingreso . $pswd;
           }
-
+          print_r($pswdSalted);
           $pswdSalted = md5($pswdSalted);
-
+          print_r(" // ");
+          print_r($pswdSalted);
           insertarUsuario(array( "usuario" => $htmlData["txtUserName"],
                                   "correo" => $htmlData["txtEmail"],
                                   "fecha" => $fchingreso,
