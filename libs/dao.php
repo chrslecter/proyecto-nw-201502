@@ -5,8 +5,7 @@
    // ------------------------
 
 
-   $conexion = new mysqli($server, $user, $pswd ,
-                          $database, $port);
+   $conexion = new mysqli($server, $user, $pswd ,$database, $port);
 
    if($conexion->connect_errno){
         //die();
