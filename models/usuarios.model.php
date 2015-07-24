@@ -53,7 +53,7 @@
       function insertarUsuario($usuario){
 
             if($usuario && is_array($usuario)){
-               $sqlInsert = "INSERT INTO `usuarios`(`usremail`, `usrpwd`, `usrnom`, `usrfching`)VALUES('%s','%s','%s',%s);";
+               $sqlInsert = "INSERT INTO `usuarios`(`usremail`, `usrpwd`, `usrnom`, `usrfching`)VALUES('%s','%s','%s','%s');";
                $sqlInsert = sprintf($sqlInsert,
                                     valstr($usuario["correo"]),
                                     valstr($usuario["pass"]),

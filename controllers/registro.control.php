@@ -30,7 +30,7 @@
           $htmlData["errores"][]=array("errmsg"=>"Correo Electrónico ya Usado!");
         }else{
           // geenrar la contraseña salada (salting)
-          $fchingreso = date("Y-m-d",$t); //date("YmdHisu"); //20141104203730069785
+          $fchingreso = time(); //date("YmdHisu"); //20141104203730069785
           if($fchingreso % 2 == 0){
             $pswdSalted = $pswd . $fchingreso;
           }else{

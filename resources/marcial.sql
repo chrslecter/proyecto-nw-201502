@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `marcial`.`usuarios` (
   `usuariopwd` VARCHAR(256) NULL COMMENT '',
   `usrtel` VARCHAR(20) NULL COMMENT '',
   `usremail` VARCHAR(125) NOT NULL COMMENT '',
-  `usrfching` DATETIME NULL COMMENT '',
+  `usrfching` VARCHAR(15) NULL COMMENT '',
   PRIMARY KEY (`usrcod`)  COMMENT '')
 ENGINE = InnoDB;
 

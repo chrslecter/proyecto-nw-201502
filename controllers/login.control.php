@@ -18,14 +18,13 @@
         $pswd = $_POST["txtPswd"];
         $returnUrl = $_POST["returnUrl"];
         $usuario = obtenerUsuario($userName);
-        print_r($usuario);
         if($usuario){
           $salt = $usuario["usrfching"];
           if ($salt % 2 == 0){
-            $pswd =  $salt . $pswd;
+            $pswd =  $pswd . $salt;
             print_r($pswd);
           }else {
-            $pswd =  $pswd . $salt;
+            $pswd =  $salt . $pswd;
             print_r($pswd);
           }
 
@@ -33,7 +32,7 @@
           print_r(md5($pswd));
           print_r(" // ");
           print_r($usuario["usrpwd"]);
-          if(strrev(md5($usuario["usrpwd"])) == $pswd){
+          if($usuario["usrpwd"] == $pswd){
             mw_setEstaLogueado($userName, true);
             header("Location:index.php" . $_POST["returnUrl"]);
             die();

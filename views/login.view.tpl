@@ -11,5 +11,5 @@
     <label>Contraseña</label><input type="password" name="txtPswd" />
     <br>
     <input type="submit" name="btnLogin" value="Ingresar" />
-    <input type="hidden" name="returnUrl" value="{{returnUrl}}"/>  
+    <input type="hidden" name="returnUrl" value="{{returnUrl}}"/>
 </form>
