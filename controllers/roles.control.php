@@ -15,23 +15,7 @@
     /*Agregar código aquí*/
     $roles = array();
     $roles = obtenerRoles();
-    /*$categorias[] = array(
-        "catcod" => 1,
-        "catdsc" => "Categoria",
-        "catest" => "ACT"
-    );
-    $categorias[] = array(
-        "catcod" => 2,
-        "catdsc" => "Categoria 2",
-        "catest" => "ACT"
-    );
-    $categorias[] = array(
-        "catcod" => 3,
-        "catdsc" => "Categoria 3",
-        "catest" => "INA"
-    );*/
 
-    /*====================*/
     renderizar("roles",
                 array("roles"=>$roles));
   }
