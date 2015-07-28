@@ -30,6 +30,9 @@
         case "login":
             require_once("controllers/login.control.php");
             break;
+        case "logout":
+            require_once("controllers/logout.control.php");
+            break;
         case "registro":
             require_once("controllers/registro.control.php");
             break;

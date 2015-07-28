@@ -1,6 +1,22 @@
 <br>
 <br>
 <br>
+<div id="slider">
+    <ul class="bjqs">
+        <li>
+            <img src="css/ludus.jpg" alt="" title="Somos Distribuidores De los principales productos de la Wizards Of the coast " />
+        </li>
+        <li>
+            <img src="img/slider1.jpg" alt="" title="WotC es la Compañia mas grande en TCG a Nivel Mundial." />
+        </li>
+        <li>
+            <img src="img/slider2.jpg" alt="" title="Magic, es uno de los TCG Mas jugados a Nivel Mundial. " />
+        </li>
+        <li>
+            <img src="img/slider3.jpg" alt="" title="D&D se volvio famoso por ser un Juego de Role que disfrutas con tus amigos." />
+        </li>
+         </ul>
+ </div>
 <br>
 
 <p>

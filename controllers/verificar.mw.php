@@ -2,6 +2,7 @@
 //middleware de verificación
 
     function mw_estaLogueado(){
+      print_r($_SESSION);
         if( isset($_SESSION["userLogged"])
             &&
             $_SESSION["userLogged"] == true){
@@ -9,7 +10,7 @@
         }
         return false;
     }
-    
+
     function mw_setEstaLogueado($usuario, $logueado){
         if($logueado){
             $_SESSION["userLogged"] = true;
@@ -19,7 +20,7 @@
             unset($_SESSION["userName"]);
         }
     }
-    
+
     function mw_redirectToLogin($to){
         $loginstring = urlencode("?".$to);
         $url = "index.php?page=login&returnUrl=".$loginstring;

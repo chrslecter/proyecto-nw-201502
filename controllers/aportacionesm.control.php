@@ -19,6 +19,7 @@
     $htmlDatos["aportacionesCan"]="";
     $htmlDatos["aportacionesDes"] = "";
     $htmlDatos["disabled"]="";
+    $htmlDatos["log"]=estaLogueado();
 
     if(isset($_GET["mode"])){
       switch($_GET["mode"]){

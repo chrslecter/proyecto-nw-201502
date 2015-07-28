@@ -12,6 +12,7 @@
     $htmlData["errores"] = array();
     $htmlData["txtUserName"] = "";
     $htmlData["txtEmail"]="";
+    $htmlData["log"]=estaLogueado();
 
     if(isset($_POST["btnRegister"])){
       $htmlData["txtUserName"] = $_POST["txtUserName"];

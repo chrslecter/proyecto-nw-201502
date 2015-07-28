@@ -1,34 +1,12 @@
 <?php
   require_once("libs/dao.php");
-    function validarLogin(&$conection, $email, $pwd){
-        $validado = false;
-
-        $selectQuery = "select usremail, usrpwd, Nombre from usuarios ";
-        $selectQuery .= " where usremail = '%s';";
-
-        $SaltedPWD = md5($pwd . "SLD" . substr($pwd,0,3));
-        $cursorUser = $conection->query(
-                                       sprintf($selectQuery,
-                                               $email)
-                                        );
-        if($cursorUser){
-            $userData = $cursorUser->fetch_assoc();
-            if($userData["Contrasena"] == $_POST["txtPswd"]){
-            if($userData["password"] == $SaltedPWD){
-                $_SESSION["Nombre"] = $userData["Nombre"];
-                $validado = true;
-            } else {
-
-                }
-            }
-        return $validado;
-        }
-    }
 
     function estaLogueado(){
         $estalogueado = false;
         if(isset($_SESSION["Nombre"])){
             $estalogueado = $_SESSION["Nombre"] != "";
+        }else{
+          $estalogueado="Invitado";
         }
         return $estalogueado;
     }

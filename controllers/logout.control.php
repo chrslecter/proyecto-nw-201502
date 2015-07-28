@@ -5,13 +5,13 @@
  * Last Modification 2014-10-14 20:04
  */
   require_once("libs/template_engine.php");
-
+  require_once("models/usuarios.model.php");
   function run(){
-
-    renderizar("home",array());
-
-  }
+    logout();
+      header("Location:index.php");
+  }renderizar("home",array());
 
 
   run();
+
 ?>

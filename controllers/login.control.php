@@ -6,6 +6,7 @@
  */
   require_once("libs/template_engine.php");
   require_once("models/usuarios.model.php");
+  require_once("controllers/verificar.mw.php");
 
 
   function run(){
@@ -18,6 +19,7 @@
         $pswd = $_POST["txtPswd"];
         $returnUrl = $_POST["returnUrl"];
         $usuario = obtenerUsuario($userName);
+
         if($usuario){
           $salt = $usuario["usrfching"];
           if ($salt % 2 == 0){
@@ -29,11 +31,12 @@
           }
 
 
-          print_r(md5($pswd));
-          print_r(" // ");
-          print_r($usuario["usrpwd"]);
+          $pswd=md5($pswd);
+
           if($usuario["usrpwd"] == $pswd){
-            mw_setEstaLogueado($userName, true);
+            print_r($usuario);
+            $_SESSION["Nombre"]=$usuario["usrnom"];
+            estaLogueado($usuario["usrnom"]);
             header("Location:index.php" . $_POST["returnUrl"]);
             die();
           }else{

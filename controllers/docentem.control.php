@@ -24,6 +24,7 @@
     $htmlDatos["mSelected"]="selected";
     $htmlDatos["fnaSelected"]="";
     $htmlDatos["disabled"]="";
+    $htmlDatos["log"]=estaLogueado();
 
     if(isset($_GET["mode"])){
       switch($_GET["mode"]){
