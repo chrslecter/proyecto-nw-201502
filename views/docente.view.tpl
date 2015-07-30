@@ -30,35 +30,35 @@
     {{foreach docente}}
     <tr>
         <td>
-            {{doceId}}
+            {{docenteCod}}
         </td>
 
         <td>
-            {{docNom}}
+            {{docenteNom}}
         </td>
 
         <td>
-            {{docDir}}
+            {{docenteDir}}
         </td>
 
         <td>
-            {{docNac}}
+            {{docenteNac}}
         </td>
 
         <td>
-            {{docNombramiento}}
+            {{docenteNombre}}
         </td>
 
         <td>
-            {{sexo_sexoId}}
+            {{docenteSexo}}
         </td>
 
 
         <td>
             <!-- <a href="index.php?page=rolesm&mode=upd&rolcod={{rolcod}}">Actualizar</a> |
             <a href="index.php?page=rolesm&mode=dlt&rolcod={{rolcod}}">Eliminar</a> -->
-            <a href="index.php?page=docente&mode=upd&doceId={{doceId}}">Actualizar</a> |
-            <a href="index.php?page=docente&mode=dlt&doceId={{doceId}}">Eliminar</a>
+            <a href="index.php?page=docentem&mode=upd&doceId={{docenteCod}}">Actualizar</a> |
+            <a href="index.php?page=docentem&mode=dlt&doceId={{docenteCod}}">Eliminar</a>
         </td>
     </tr>
     {{endfor docente}}

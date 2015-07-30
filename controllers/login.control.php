@@ -32,11 +32,11 @@
 
 
           $pswd=md5($pswd);
-
+print_r($usuario);
           if($usuario["usrpwd"] == $pswd){
-            print_r($usuario);
-            $_SESSION["Nombre"]=$usuario["usrnom"];
-            estaLogueado($usuario["usrnom"]);
+            $_SESSION=obtenerRolesDeUsuario($usuario["usrcod"]);
+            print_r($_SESSION);
+
             header("Location:index.php" . $_POST["returnUrl"]);
             die();
           }else{

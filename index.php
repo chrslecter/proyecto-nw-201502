@@ -14,9 +14,8 @@
     //Siempre
     require_once("controllers/site.mw.php");
     require_once("controllers/verificar.mw.php");
-
+print_r($_SESSION);
     //Este switch se encarga de todo el enrutamiento
-
     switch($pageRequest){
         case "home":
             //llamar al controlador
@@ -25,42 +24,63 @@
 
         case "categorias":
             //llamar al controlador
+            if(isset($_SESSION["usrnom"])){
+            if($_SESSION["roldsc"]=="admin"){
             require_once("controllers/categorias.control.php");
-            break;
+          }}
+          break;
         case "login":
             require_once("controllers/login.control.php");
             break;
         case "logout":
+            if(isset($_SESSION["usrnom"])){
             require_once("controllers/logout.control.php");
+          }
             break;
         case "registro":
+            if(isset($_SESSION["usrnom"])){
+            if($_SESSION["roldsc"]=="admin"){
             require_once("controllers/registro.control.php");
-            break;
+          }}
+          break;
 
         case "roles":
+                if(isset($_SESSION["usrnom"])){
+                if($_SESSION["roldsc"]=="admin"){
                 require_once("controllers/roles.control.php");
-                break;
+              }}
+              break;
         case "rolesm":
                 require_once("controllers/rolesm.control.php");
                 break;
 
 
         case "docente":
+                if(isset($_SESSION["usrnom"])){
+                if($_SESSION["roldsc"]=="admin"){
                 require_once("controllers/docente.control.php");
-                break;
+              }}
+              break;
 
-                case "docentem":
-                        require_once("controllers/docentem.control.php");
-                        break;
+        case "docentem":
+            if($_SESSION["roldsc"]=="admin")
+            require_once("controllers/docentem.control.php");
+            break;
 
 
         case "aportaciones":
+            if(isset($_SESSION["usrnom"])){
+            if($_SESSION["roldsc"]=="admin"){
             require_once("controllers/aportaciones.control.php");
-                  break;
+          }}
+          break;
 
-                case "aportacionesm":
-                    require_once("controllers/aportacionesm.control.php");
-                          break;
+        case "aportacionesm":
+          if(isset($_SESSION["usrnom"])){
+            if($_SESSION["roldsc"]=="admin"){
+            require_once("controllers/aportacionesm.control.php");
+          }}
+          break;
 
         //para agregar una nueva pagina
         // agregar otro case

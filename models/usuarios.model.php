@@ -3,8 +3,8 @@
 
     function estaLogueado(){
         $estalogueado = false;
-        if(isset($_SESSION["Nombre"])){
-            $estalogueado = $_SESSION["Nombre"] != "";
+        if(isset($_SESSION)){
+            $estalogueado = $_SESSION["usrnom"] != "";
         }else{
           $estalogueado="Invitado";
         }
@@ -38,7 +38,6 @@
                                     valstr($usuario["usuario"]),
                                     valstr($usuario["fecha"])
                                     );
-                print_r($sqlInsert);
                if(ejecutarNonQuery($sqlInsert)){
 
                  return getLastInserId();
@@ -47,18 +46,27 @@
             return false;
           }
 
-    function obtenerRolesDeUsuario(&$conexion,$email){
-        $roles = array();
-        $roles = array();
-        if($conexion){
-            $sqlstr = "select a.IdRol, b.IdRol, a.Descripcion from roles a inner join  usuarios b  on a.IdRol = b.IdRol where b.email = '%s';";
-            $crs = $conexion->query(sprintf($sqlstr,$email));
-            while($rol = $crs->fetch_assoc()){
-                $roles[] = $rol;
-            }
-        }
-        return $roles;
-    }
+    // function obtenerRolesDeUsuario(&$conexion,$email){
+    //     $roles = array();
+    //     if($conexion){
+    //         $sqlstr = "select rolcod from roles inner join usuarios where usrcod = %d;";
+    //         $crs = $conexion->query(sprintf($sqlstr,$email));
+    //         while($rol = $crs->fetch_assoc()){
+    //             $roles[] = $rol;
+    //         }
+    //     }
+    //     return $roles;
+    // }
+
+    function obtenerRolesDeUsuario($usuario){
+      print_r($usuario);
+        $sqlstr = "SELECT rolcod, roldsc,usrnom, usremail FROM roles INNER JOIN usuarios WHERE usrcod=%s;";
+        $sqlstr = sprintf($sqlstr, valstr($usuario));
+
+        $usuario = obtenerUnRegistro($sqlstr);
+        return $usuario;
+      }
+
     function guardarUltimalogin(){
         $_SESSION["ultLogin"] = $login;
 

@@ -1,39 +1,58 @@
 <br>
-<br>
-<br>
 <div id="slider">
     <ul class="bjqs">
         <li>
-            <img src="css/ludus.jpg" alt="" title="Somos Distribuidores De los principales productos de la Wizards Of the coast " />
+            <img src="public/img/logo.jpg" alt="" title="Somos Distribuidores De los principales productos de la Wizards Of the coast " />
         </li>
         <li>
-            <img src="img/slider1.jpg" alt="" title="WotC es la Compañia mas grande en TCG a Nivel Mundial." />
+            <img src="public/img/logo.jpg" alt="" title="WotC es la Compañia mas grande en TCG a Nivel Mundial." />
         </li>
         <li>
-            <img src="img/slider2.jpg" alt="" title="Magic, es uno de los TCG Mas jugados a Nivel Mundial. " />
+            <img src="public/img/logo.jpg" alt="" title="Magic, es uno de los TCG Mas jugados a Nivel Mundial. " />
         </li>
         <li>
-            <img src="img/slider3.jpg" alt="" title="D&D se volvio famoso por ser un Juego de Role que disfrutas con tus amigos." />
+            <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30940.598812402877!2d-87.06612273611753!3d14.219654409018975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDEzJzMxLjYiTiA4N8KwMDQnMDAuMSJX!5e0!3m2!1sen!2shn!4v1438193267380" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+            <img src="public/img/logo.jpg" alt="" title="D&D se volvio famoso por ser un Juego de Role que disfrutas con tus amigos." />
         </li>
          </ul>
  </div>
 <br>
 
+<div >
 <p>
-  Este es un simple ejemplo de como podemos utilizar php y los conceptos de un patrón MVC para estructurar un proyecto de negocio web usando un esquema funcional. El patrón "Modelo, Vista Controlador" es utilizando en muchos lenguages de programación por su forma lógica y versatil de organizar el código. Dentro de los beneficios que ofrece el implementarlo se encuentra:
-  <ol>
-   <li>
-     Separación Lógica Módular del Código
-   </li>
-   <li>
-     Adecuado para trabajo en equipo y con sistemas de versionamiento (git)
-   </li>
-   <li>
-     Establecimiento de Responsabilidad de Código
-   </li>
-  </ol>
+  Bienvenido a este sitio es para reforzar los contenidos vistos en clase. Aquí encontrarás información de los cursos, así como el calendario académico, recursos y últimos anuncios. De esta manera puedes descargar la información de cada clase.
 </p>
-<h2>Componentes del MVC</h2>
+</div>
+<div >
+
+  <ol >
+   <li>
+     Clases
+
+   </li>
+   <li>
+     Calendario
+
+   </li>
+   <li>
+     Recursos
+
+   </li>
+   <li>
+     Anuncios
+
+   </li>
+   <li>
+     Cursos Virtuales
+     </li>
+   <li>
+      Contacto
+     </li>
+   </ol>
+</div>
+<div >
+
+<h3>Componentes del MVC</h3>
 <p>
   En este ejemplo se encuentra los siguientes componentes:
   <ol>
@@ -51,3 +70,4 @@
     </li>
   </ol>
 </p>
+</div>

@@ -46,8 +46,8 @@
               // $htmlDatos["actSelected"]=($_POST["rolest"] =="ACT")?"selected":"";
               // $htmlDatos["inaSelected"]=($_POST["rolest"] =="INA")?"selected":"";
 
-              $htmlDatos["doceId"] = $_POST["doceId"];
-              $htmlDatos["docNom"]= $_POST["docNom"];
+              $htmlDatos["doceId"] = $_POST["docenteCod"];
+              $htmlDatos["docNom"]= $_POST["docenteNom"];
               $htmlDatos["docDir"] = $_POST["docDir"];
               $htmlDatos["docNac"]= $_POST["docNac"];
               $htmlDatos["docNombramiento"] = $_POST["docNombramiento"];
@@ -73,16 +73,16 @@
           if(isset($_GET["doceId"])){
             $docente = obtenerDocente($_GET["doceId"]);
             if($docente){
-              $htmlDatos["doceTitle"] = "Actualizar ".$docente["docNom"];
+              $htmlDatos["doceTitle"] = "Actualizar ".$docente["docenteNom"];
               $htmlDatos["doceMode"] = "upd";
-              $htmlDatos["doceId"] = $_POST["doceId"];
-              $htmlDatos["docNom"]= $_POST["docNom"];
-              $htmlDatos["docDir"] = $_POST["docDir"];
-              $htmlDatos["docNac"]= $_POST["docNac"];
-              $htmlDatos["docNombramiento"] = $_POST["docNombramiento"];
-              $htmlDatos["sexo_sexoId"]= $_POST["sexo_sexoId"];
-              $htmlDatos["mSelected"]=($_POST["doc_sexoId"] =="1")?"selected":"";
-              $htmlDatos["fSelected"]=($_POST["doc_sexoId"] =="2")?"selected":"";
+              $htmlDatos["doceId"] = $_POST["docenteCod"];
+              $htmlDatos["docNom"]= $_POST["docenteNom"];
+              $htmlDatos["docDir"] = $_POST["docenteDir"];
+              $htmlDatos["docNac"]= $_POST["docenteNac"];
+              $htmlDatos["docNombramiento"] = $_POST["docenteNombre"];
+              $htmlDatos["sexo_sexoId"]= $_POST["docenteSexo"];
+              $htmlDatos["mSelected"]=($_POST["docenteSexo"] =="Masculino")?"selected":"";
+              $htmlDatos["fSelected"]=($_POST["docenteSexo"] =="Femenino")?"selected":"";
               renderizar("docentem", $htmlDatos);
             }else{
               redirectWithMessage("¡Roles No Encontrada!","index.php?page=roles");
